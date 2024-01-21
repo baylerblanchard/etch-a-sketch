@@ -1,5 +1,5 @@
 html{
-    background-color: #ffefef;
+    background-color: #a5cec8;
     align-items: center;
     justify-content: center;
 }
@@ -15,7 +15,7 @@ html{
     align-items: end;
 }
 
-.right{
+#right{
     display: flex;
     float: right;
     width: 48%;
@@ -34,6 +34,9 @@ html{
     margin-right: 15px;
     display: flex;
     justify-content: center;
+    color: aliceblue;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #sketch-container{
