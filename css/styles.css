@@ -46,10 +46,16 @@ html{
     border: 2px solid red;
 }
 
-#cell{
-    width: 10px;
-    height: 10px;
+.cell{
     border: 1px solid black;
+    display: flex;
+}
+
+#grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #button-container{
