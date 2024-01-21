@@ -47,12 +47,16 @@ html{
 }
 
 .cell{
-    border: 1px solid black;
     display: flex;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    background-color: white;
 }
 
 #grid{
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -64,4 +68,7 @@ html{
     margin-top: 10px;
     flex-direction: column;
     margin: 15px;
+}
+
+#grid{
 }

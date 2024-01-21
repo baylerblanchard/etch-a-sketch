@@ -8,7 +8,7 @@ function makeGrid(a) {
 
         for (var j = 0; j < a; j++) {
             var cell = document.createElement("div");
-            cell.className = "cell";
+            cell.innerHTML = '<div class="cell"></div>';
             row.appendChild(cell);
         }
     }
