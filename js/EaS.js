@@ -3,7 +3,7 @@ function makeGrid(a) {
 
     for (var i = 0; i < a; i++) {
         var row = document.createElement("div");
-        row.className = "cell";
+        row.className = "row";
         grid.appendChild(row);
 
         for (var j = 0; j < a; j++) {
