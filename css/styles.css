@@ -36,10 +36,10 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
-.cell{
+.cell-16x16{
     display: flex;
-    width: 10px;
-    height: 10px;
+    width: 33px;
+    height: 33px;
     border: 1px solid black;
     background-color: white;
 }
@@ -51,6 +51,7 @@ html{
 
 #grid{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     flex-direction: column;
     margin: 45px;
