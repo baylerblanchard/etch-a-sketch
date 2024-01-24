@@ -1,4 +1,5 @@
 const gridSize = 16;
+var sliderValue;
 
 function makeGrid(gridSize) {
     var grid = document.getElementById("grid");
@@ -20,30 +21,12 @@ function sliderListener() {
     var slider = document.getElementById("slider");
 
     slider.addEventListener("change", function() {
-       console.log(slider.value);
+        sliderValue = slider.value;
+        console.log(sliderValue);
     });
 }
 
-function gridHandler() {
-    var slider = document.getElementById("sleder");
-    sliderListener();
-
-    //3 is 16x16 so should be default
-    if(slider.value = 3){
-        gridSize = 16;
-    }else if(slider.value = 1){
-        gridSize = 4;
-    }else if(slider.value = 2){
-        gridSize = 9;
-    }else if(slider.value = 4){
-        gridSize = 64;
-    }else if(slider.value = 5){
-        gridsize = 100;
-    }
-
-    return gridSize;
-}
 
 makeGrid(gridSize);
 
-console.log()
+sliderListener();
