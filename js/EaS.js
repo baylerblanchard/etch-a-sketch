@@ -27,6 +27,6 @@ function sliderListener() {
 }
 
 
-makeGrid(gridSize);
 
 sliderListener();
+makeGrid(gridSize);
