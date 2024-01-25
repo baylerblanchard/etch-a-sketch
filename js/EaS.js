@@ -23,7 +23,17 @@ function sliderListener() {
     slider.addEventListener("change", function() {
         sliderValue = slider.value;
         clearGrid(sliderValue);
-        console.log(sliderValue);
+        if(sliderValue == 1){
+            makeGrid(5);
+        }else if(sliderValue == 2){
+            makeGrid(9);
+        }else if(sliderValue == 3){
+            makeGrid(16);
+        }else if(sliderValue == 4){
+            makeGrid(64);
+        }else if(sliderValue == 5){
+            makeGrid(100);
+        }
     });
 
 }
