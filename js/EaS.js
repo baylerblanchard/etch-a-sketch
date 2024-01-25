@@ -22,16 +22,20 @@ function sliderListener() {
     
     slider.addEventListener("change", function() {
         sliderValue = slider.value;
-        clearGrid(sliderValue);
         if(sliderValue == 1){
+            clearGrid();
             makeGrid(5);
         }else if(sliderValue == 2){
+            clearGrid();
             makeGrid(9);
         }else if(sliderValue == 3){
+            clearGrid();
             makeGrid(16);
         }else if(sliderValue == 4){
+            clearGrid();
             makeGrid(64);
         }else if(sliderValue == 5){
+            clearGrid();
             makeGrid(100);
         }
     });
@@ -39,13 +43,13 @@ function sliderListener() {
 }
 
 //clear button logic
-function clearGrid(a){
+function clearGrid(){
     var clearListener = document.getElementById("clear");
 
     clearListener.addEventListener("click", function(){
         var grid = document.getElementById("grid");
         grid.innerHTML = '';
-        makeGrid(a)});
+        });
 }
 
 sliderListener();
