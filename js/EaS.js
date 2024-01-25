@@ -19,14 +19,24 @@ function makeGrid(gridSize) {
 
 function sliderListener() {
     var slider = document.getElementById("slider");
-
+    
     slider.addEventListener("change", function() {
         sliderValue = slider.value;
+        clearGrid(sliderValue);
         console.log(sliderValue);
     });
+
 }
 
+//clear button logic
+function clearGrid(a){
+    var clearListener = document.getElementById("clear");
 
+    clearListener.addEventListener("click", function(){
+        var grid = document.getElementById("grid");
+        grid.innerHTML = '';
+        makeGrid(a)});
+}
 
 sliderListener();
 makeGrid(gridSize);
