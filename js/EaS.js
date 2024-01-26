@@ -1,4 +1,11 @@
 const gridSize = 16;
+const defaultColor = "black";
+
+//color picker logic
+function colorPicker(){
+    var colorPicker = document.getElementById("colorPicker");
+    var color = colorPicker.value;
+}
 
 function makeGrid(gridSize) {
     var grid = document.getElementById("grid");
