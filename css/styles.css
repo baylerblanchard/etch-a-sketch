@@ -28,12 +28,13 @@ html{
 }
 
 #title{
-    margin-right: 15px;
     display: flex;
     justify-content: center;
     color: aliceblue;
-    font-size: 50px;
+    font-size: 100px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px black;
 }
 
 .cell-5x5{
