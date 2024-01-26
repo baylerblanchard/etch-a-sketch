@@ -36,17 +36,54 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
+.cell-5x5{
+    display: flex;
+    justify-content: center;
+    width: 102px;
+    height: 102px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.cell-9x9{
+    display: flex;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+
 .cell-16x16{
     display: flex;
+    justify-content: center;
     width: 33px;
     height: 33px;
     border: 1px solid black;
     background-color: white;
 }
 
+.cell-64x64{
+    display: flex;
+    justify-content: center;
+    width: 8px;
+    height: 8px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.cell-100x100{
+    display: flex;
+    justify-content: center;
+    width: 4px;
+    height: 4px;
+    border: 1px solid black;
+    background-color: white;
+}
+
 .row{
     display: flex;
-    border: 1px dashed red;
 }
 
 #grid{
