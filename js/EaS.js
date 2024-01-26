@@ -1,5 +1,4 @@
 const gridSize = 16;
-var sliderValue;
 
 function makeGrid(gridSize) {
     var grid = document.getElementById("grid");
@@ -32,12 +31,12 @@ function makeGrid(gridSize) {
         }
     }else if(gridSize == 3 || gridSize == 16){
 
-            for (var i = 0; i < gridSize; i++) {
+            for (var i = 0; i < 16; i++) {
                 var row = document.createElement("div");
                 row.className = "row";
                 grid.appendChild(row);
     
-                for (var j = 0; j < gridSize; j++) {
+                for (var j = 0; j < 16; j++) {
                     var cell = document.createElement("div");
                     cell.innerHTML = '<div class="cell-16x16"></div>';
                     row.appendChild(cell);
@@ -98,11 +97,14 @@ function sliderListener() {
 //clear button logic
 function clearGrid(){
     var clearListener = document.getElementById("clear");
+    var slider = document.getElementById("slider");
 
     clearListener.addEventListener("click", function(){
         var grid = document.getElementById("grid");
         grid.innerHTML = '';
+        makeGrid(slider.value);
         });
+
 }
 
 //clear logic for slider
