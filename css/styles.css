@@ -37,45 +37,12 @@ html{
     text-shadow: 2px 2px 2px black;
 }
 
-.cell-5x5{
+.cell{
     display: flex;
     justify-content: center;
-    width: 120px;
-    height: 120px;
     background-color: white;
-}
-
-.cell-9x9{
-    display: flex;
-    justify-content: center;
-    width: 66px;
-    height: 66px;
-    background-color: white;
-}
-
-
-.cell-16x16{
-    display: flex;
-    justify-content: center;
-    width: 37px;
     height: 37px;
-    background-color: white;
-}
-
-.cell-64x64{
-    display: flex;
-    justify-content: center;
-    width: 9px;
-    height: 9px;
-    background-color: white;
-}
-
-.cell-100x100{
-    display: flex;
-    justify-content: center;
-    width: 6px;
-    height: 6px;
-    background-color: white;
+    width: 37px;
 }
 
 .row{

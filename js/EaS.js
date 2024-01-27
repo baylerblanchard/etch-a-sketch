@@ -19,7 +19,7 @@ function makeGrid(gridSize) {
 
             for (var j = 0; j < 5; j++) {
                 var cell = document.createElement("div");
-                cell.innerHTML = '<div class="cell-5x5"></div>';
+                cell.innerHTML = '<div class="cell" style =height = 120px; width = 120px;></div>';
                 row.appendChild(cell);
             }
         }
@@ -32,7 +32,9 @@ function makeGrid(gridSize) {
 
             for (var j = 0; j < 9; j++) {
                 var cell = document.createElement("div");
-                cell.innerHTML = '<div class="cell-9x9"></div>';
+                cell.innerHTML = '<div class="cell"></div>';
+                cell.style.height = "66px";
+                cell.style.width = "66px";
                 row.appendChild(cell);
             }
         }
@@ -45,7 +47,9 @@ function makeGrid(gridSize) {
     
                 for (var j = 0; j < 16; j++) {
                     var cell = document.createElement("div");
-                    cell.innerHTML = '<div class="cell-16x16"></div>';
+                    cell.innerHTML = '<div class="cell"></div>';
+                    cell.style.height = "37px";
+                    cell.style.width = "37px";
                     row.appendChild(cell);
                 }
             }
@@ -58,7 +62,9 @@ function makeGrid(gridSize) {
     
                 for (var j = 0; j < 64; j++) {
                     var cell = document.createElement("div");
-                    cell.innerHTML = '<div class="cell-64x64"></div>';
+                    cell.innerHTML = '<div class="cell"></div>';
+                    cell.style.height = "9px";
+                    cell.style.width = "9px";
                     row.appendChild(cell);
                 }
             }
@@ -71,7 +77,9 @@ function makeGrid(gridSize) {
     
                 for (var j = 0; j < 100; j++) {
                     var cell = document.createElement("div");
-                    cell.innerHTML = '<div class="cell-100x100"></div>';
+                    cell.innerHTML = '<div class="cell"></div>';
+                    cell.style.height = "6px";
+                    cell.style.width = "6px";
                     row.appendChild(cell);
                 }
             }
@@ -99,6 +107,11 @@ function sliderListener() {
         }
     });
 
+}
+
+//hover logic
+function hoverListener() {
+    cell = document.getElementsByClassName("cell-16x16");
 }
 
 //clear button logic
