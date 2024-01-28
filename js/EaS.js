@@ -1,10 +1,17 @@
 const gridSize = 16;
 const defaultColor = "black";
 
+
 //color picker logic
-function colorPicker(){
-    var colorPicker = document.getElementById("colorPicker");
-    var color = colorPicker.value;
+var colorPicker = document.getElementById("color");
+document.addEventListener("change", function(){console.log("color changed " + colorPicker.value)});
+
+//hover logic
+function hoverListener() {
+    var cells = document.getElementsByClassName("cell");
+    cells.document.addEventListener("mouseover", function(){
+        console.log("hovered");
+    });
 }
 
 function makeGrid(gridSize) {
@@ -19,7 +26,10 @@ function makeGrid(gridSize) {
 
             for (var j = 0; j < 5; j++) {
                 var cell = document.createElement("div");
-                cell.innerHTML = '<div class="cell-5x5"></div>';
+                cell.className = "cell";
+                cell.style.height = "120px"
+                cell.style.width = "120px"
+                //cell.innerHTML = '<div class="cell-5x5"></div>';
                 row.appendChild(cell);
             }
         }
@@ -32,7 +42,10 @@ function makeGrid(gridSize) {
 
             for (var j = 0; j < 9; j++) {
                 var cell = document.createElement("div");
-                cell.innerHTML = '<div class="cell-9x9"></div>';
+                cell.className = "cell";
+                cell.style.height = "67px"
+                cell.style.width = "67px"
+                //cell.innerHTML = '<div class="cell-9x9"></div>';
                 row.appendChild(cell);
             }
         }
@@ -45,7 +58,10 @@ function makeGrid(gridSize) {
     
                 for (var j = 0; j < 16; j++) {
                     var cell = document.createElement("div");
-                    cell.innerHTML = '<div class="cell"></div>';
+                    cell.className = "cell";
+                    cell.style.height = "37px"
+                    cell.style.width = "37px"
+                    //cell.innerHTML = '<div class="cell"></div>';
                     row.appendChild(cell);
                 }
             }
@@ -58,7 +74,10 @@ function makeGrid(gridSize) {
     
                 for (var j = 0; j < 64; j++) {
                     var cell = document.createElement("div");
-                    cell.innerHTML = '<div class="cell-64x64"></div>';
+                    cell.className = "cell";
+                    cell.style.height = "9px"
+                    cell.style.width = "9px"
+                    //cell.innerHTML = '<div class="cell-64x64"></div>';
                     row.appendChild(cell);
                 }
             }
@@ -71,7 +90,10 @@ function makeGrid(gridSize) {
     
                 for (var j = 0; j < 100; j++) {
                     var cell = document.createElement("div");
-                    cell.innerHTML = '<div class="cell-100x100"></div>';
+                    cell.className = "cell";
+                    cell.style.height = "6px"
+                    cell.style.width = "6px"
+                    //cell.innerHTML = '<div class="cell-100x100"></div>';
                     row.appendChild(cell);
                 }
             }
@@ -126,6 +148,7 @@ function clearSlider(){
     grid.innerHTML = '';
 }
 
+hoverListener();
 clearGrid();
 sliderListener();
 makeGrid(gridSize);
