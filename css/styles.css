@@ -17,7 +17,6 @@ html{
     display: flex;
     float: right;
     width: 48%;
-    height: 100vh;
     border: 2px solid black;
     margin-bottom: 5px;
 }
@@ -43,6 +42,38 @@ html{
     background-color: white;
     height: 37px;
     width: 37px;
+}
+
+.cell-5x5{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 120px;
+    width: 120px;
+}
+
+.cell-9x9{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 67px;
+    width: 67px;
+}
+
+.cell-64x64{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 9px;
+    width: 9px;
+}
+
+.cell-100x100{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 6px;
+    width: 6px;
 }
 
 .row{
