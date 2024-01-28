@@ -7,12 +7,8 @@ var colorPicker = document.getElementById("color");
 document.addEventListener("change", function(){console.log("color changed " + colorPicker.value)});
 
 //hover logic
-function hoverListener() {
-    var cells = document.getElementsByClassName("cell");
-    cells.document.addEventListener("mouseover", function(){
-        console.log("hovered");
-    });
-}
+var cells = document.getElementsByClassName("cell");
+
 
 function makeGrid(gridSize) {
     var grid = document.getElementById("grid");
@@ -123,10 +119,6 @@ function sliderListener() {
 
 }
 
-//hover logic
-function hoverListener() {
-    cell = document.getElementsByClassName("cell-16x16");
-}
 
 //clear button logic
 function clearGrid(){
@@ -148,7 +140,7 @@ function clearSlider(){
     grid.innerHTML = '';
 }
 
-hoverListener();
 clearGrid();
 sliderListener();
 makeGrid(gridSize);
+console.log(cells);
