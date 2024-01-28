@@ -7,8 +7,9 @@ var colorPicker = document.getElementById("color");
 document.addEventListener("change", function(){console.log("color changed " + colorPicker.value)});
 
 //hover logic
-var cells = document.getElementsByClassName("cell");
-
+function changeBackground(){
+    
+}
 
 function makeGrid(gridSize) {
     var grid = document.getElementById("grid");
@@ -143,4 +144,3 @@ function clearSlider(){
 clearGrid();
 sliderListener();
 makeGrid(gridSize);
-console.log(cells);
