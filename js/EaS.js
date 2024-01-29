@@ -1,14 +1,18 @@
 const gridSize = 16;
-const defaultColor = "black";
-
 
 //color picker logic
 var colorPicker = document.getElementById("color");
 document.addEventListener("change", function(){console.log("color changed " + colorPicker.value)});
 
 //hover logic
-function changeBackground(){
-    
+function changeBackground(color){
+    var colorPicker = document.getElementById("color");
+
+    var divs = document.getElementsByClassName("cell");
+
+    divs.addEventListener("mouseover", function(){
+        divs.style.backgroundColor = colorPicker.value;
+    });
 }
 
 function makeGrid(gridSize) {
