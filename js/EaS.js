@@ -6,7 +6,17 @@ document.addEventListener("change", function(){console.log("color changed " + co
 
 //random color logic
 function randomColor(){
+    var randButton = document.getElementById("random");
+    var cells = document.getElementsByClassName("cell");
 
+    randButton.addEventListener("click", function(){
+        console.log("random clicked");
+        for (var i = 0; i<cells.length; i++){
+            cells[i].addEventListener("mouseover", function(){
+                this.style.backgroundColor = '#'+(0x1000000+Math.random()*0xffffff).toString(16).substr(1,6);
+            });
+        }
+    });
 }
 
 //hover to paint cells logic
@@ -152,3 +162,4 @@ function clearSlider(){
 clearGrid();
 sliderListener();
 makeGrid(gridSize);
+randomColor();
