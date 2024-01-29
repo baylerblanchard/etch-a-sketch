@@ -4,8 +4,8 @@ const gridSize = 16;
 var colorPicker = document.getElementById("color");
 document.addEventListener("change", function(){console.log("color changed " + colorPicker.value)});
 
-//hover logic
-function changeBackground(){
+//hover to paint cells logic
+function paint(){
     var colorPicker = document.getElementById("color");
 
     var divs = document.getElementsByClassName("cell");
@@ -17,6 +17,7 @@ function changeBackground(){
     }
 }
 
+//make grid logic
 function makeGrid(gridSize) {
     var grid = document.getElementById("grid");
 
@@ -32,7 +33,6 @@ function makeGrid(gridSize) {
                 cell.className = "cell";
                 cell.style.height = "120px"
                 cell.style.width = "120px"
-                //cell.innerHTML = '<div class="cell-5x5"></div>';
                 row.appendChild(cell);
             }
         }
@@ -48,7 +48,6 @@ function makeGrid(gridSize) {
                 cell.className = "cell";
                 cell.style.height = "67px"
                 cell.style.width = "67px"
-                //cell.innerHTML = '<div class="cell-9x9"></div>';
                 row.appendChild(cell);
             }
         }
@@ -64,7 +63,6 @@ function makeGrid(gridSize) {
                     cell.className = "cell";
                     cell.style.height = "37px"
                     cell.style.width = "37px"
-                    //cell.innerHTML = '<div class="cell"></div>';
                     row.appendChild(cell);
                 }
             }
@@ -80,7 +78,6 @@ function makeGrid(gridSize) {
                     cell.className = "cell";
                     cell.style.height = "9px"
                     cell.style.width = "9px"
-                    //cell.innerHTML = '<div class="cell-64x64"></div>';
                     row.appendChild(cell);
                 }
             }
@@ -96,14 +93,14 @@ function makeGrid(gridSize) {
                     cell.className = "cell";
                     cell.style.height = "6px"
                     cell.style.width = "6px"
-                    //cell.innerHTML = '<div class="cell-100x100"></div>';
                     row.appendChild(cell);
                 }
             }
         }
-
+        paint();
 }
 
+//slider logic
 function sliderListener() {
     var slider = document.getElementById("slider");
     
@@ -150,4 +147,3 @@ function clearSlider(){
 clearGrid();
 sliderListener();
 makeGrid(gridSize);
-changeBackground();
