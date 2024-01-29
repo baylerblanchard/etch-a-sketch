@@ -4,6 +4,11 @@ const gridSize = 16;
 var colorPicker = document.getElementById("color");
 document.addEventListener("change", function(){console.log("color changed " + colorPicker.value)});
 
+//random color logic
+function randomColor(){
+
+}
+
 //hover to paint cells logic
 function paint(){
     var colorPicker = document.getElementById("color");
