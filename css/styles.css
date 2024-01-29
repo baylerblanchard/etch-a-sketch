@@ -17,7 +17,9 @@ html{
     display: flex;
     float: right;
     width: 48%;
-    border: 2px solid black;
+    box-shadow: 1px 1px 1px 1px black;
+    background-color: rgb(112, 203, 255);
+    border-radius: 25px;
     margin-bottom: 5px;
 }
 
@@ -48,6 +50,7 @@ html{
 
 #grid{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     width: 100%;
     flex-direction: column;
