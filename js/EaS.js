@@ -5,14 +5,16 @@ var colorPicker = document.getElementById("color");
 document.addEventListener("change", function(){console.log("color changed " + colorPicker.value)});
 
 //hover logic
-function changeBackground(color){
+function changeBackground(){
     var colorPicker = document.getElementById("color");
 
     var divs = document.getElementsByClassName("cell");
 
-    divs.addEventListener("mouseover", function(){
-        divs.style.backgroundColor = colorPicker.value;
-    });
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].addEventListener("mouseover", function(){
+            this.style.backgroundColor = colorPicker.value;
+        });
+    }
 }
 
 function makeGrid(gridSize) {
@@ -148,3 +150,4 @@ function clearSlider(){
 clearGrid();
 sliderListener();
 makeGrid(gridSize);
+changeBackground();
