@@ -1,8 +1,5 @@
 const gridSize = 16;
 
-//color picker logic
-var colorPicker = document.getElementById("color");
-document.addEventListener("change", function(){console.log("color changed " + colorPicker.value)});
 
 //eraser logic
 function eraser(){
@@ -10,10 +7,10 @@ function eraser(){
     var cells = document.getElementsByClassName("cell");
 
     eraserButton.addEventListener("click", function(){
-        console.log("random clicked");
+        console.log("erase clicked");
         for (var i = 0; i<cells.length; i++){
             cells[i].addEventListener("mouseover", function(){
-                this.style.backgroundColor = rgb(255,255,255);
+                this.style.backgroundColor = 'white';
             });
         }
     });
@@ -40,11 +37,13 @@ function paint(){
 
     var divs = document.getElementsByClassName("cell");
 
-    for (var i = 0; i < divs.length; i++) {
-        divs[i].addEventListener("mouseover", function(){
-            this.style.backgroundColor = colorPicker.value;
-        });
-    }
+    colorPicker.addEventListener("change", function(){
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].addEventListener("mouseover", function(){
+                this.style.backgroundColor = colorPicker.value;
+            });
+        }
+    });
 }
 
 //make grid logic
@@ -179,3 +178,4 @@ sliderListener();
 makeGrid(gridSize);
 randomColor();
 eraser();
+paint();
