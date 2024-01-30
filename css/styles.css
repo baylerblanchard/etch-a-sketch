@@ -133,3 +133,22 @@ html{
   border-width: 4px 0 0;
   background: none;
 }
+
+#color {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  #color::-webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+  }
+  #color::-moz-color-swatch {
+    border-radius: 15px;
+    border: none;
+  }
