@@ -1,5 +1,5 @@
 html{
-    background-color: #a5cec8;
+    background-color: #adc6db;
 }
 
 .left{
@@ -17,7 +17,6 @@ html{
     display: flex;
     float: right;
     width: 48%;
-    box-shadow: 1px 1px 1px 1px black;
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
     margin-bottom: 5px;
