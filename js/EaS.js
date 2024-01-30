@@ -37,6 +37,12 @@ function paint(){
 
     var divs = document.getElementsByClassName("cell");
 
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].addEventListener("mouseover", function(){
+            this.style.backgroundColor = colorPicker.value;
+        });
+    }
+    
     colorPicker.addEventListener("change", function(){
         for (var i = 0; i < divs.length; i++) {
             divs[i].addEventListener("mouseover", function(){
